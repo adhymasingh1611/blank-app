@@ -232,14 +232,8 @@ def phone():
             st.success("Phone Number Generated ✅")
             st.write(f"📞 **{code} {mobile}**")
 
-gender = st.radio("Gender", ["Male", "Female"])
-agree = st.checkbox("I agree")
-if st.button("Submit"):
-    st.write("Button clicked")
-country = st.selectbox("Country", ["IND", "USA", "UK"])
-skills = st.multiselect("Skills", ["Python", "AI", "ML"])
-st.warning("Warning message")
-st.info("Information")
+
+
 st.image("image.jpg")
 st.audio("song.mp3")
 st.video("video.mp4")
