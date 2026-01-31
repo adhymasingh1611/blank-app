@@ -214,14 +214,23 @@ def phone():
     "YEM": "+967",
     "ZMB": "+260",
     "ZWE": "+263"}
-    st.title("enter your country first 3 letter capital")
-    if st.button("continue"):
-        st.balloons()
-    country=str(input("enter your country name:"))
-    code=country_code[country]
-    print(code,end=" ")
-    no=int(input())
-    print(code,no)
+    st.title("📱 Country Phone Code Finder")
+
+    st.write("Enter **first 3-letter country code in CAPITAL** (e.g. IND, USA, GBR)")
+
+    country = st.text_input("Country Code")
+    mobile = st.text_input("Mobile Number")
+
+    if st.button("Continue"):
+        if country == "" or mobile == "":
+            st.error("Please fill all fields ❌")
+        elif country not in country_code:
+            st.error("Invalid country code ❌")
+        else:
+            st.balloons()
+            code = country_code[country]
+            st.success("Phone Number Generated ✅")
+            st.write(f"📞 **{code} {mobile}**")
 
 phone()
 
