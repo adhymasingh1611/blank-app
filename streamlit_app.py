@@ -233,13 +233,8 @@ def phone():
             st.write(f"📞 **{code} {mobile}**")
 
 
-
-st.image("image.jpg")
-st.audio("song.mp3")
-st.video("video.mp4")
-st.dataframe(df)
 st.json({"IND": "+91"})
-col1, col2 = st.columns(2)
+
 
 
 phone()
