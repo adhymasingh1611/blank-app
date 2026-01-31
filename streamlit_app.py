@@ -227,7 +227,7 @@ def phone():
         elif country not in country_code:
             st.error("Invalid country code ❌")
         else:
-            st.balloons()
+            st.snow()
             code = country_code[country]
             st.success("Phone Number Generated ✅")
             st.write(f"📞 **{code} {mobile}**")
