@@ -217,11 +217,11 @@ def phone():
     st.title("enter your country first 3 letter capital")
     if st.button("continue"):
         st.balloons()
-        country=str(input("enter your country name:"))
+    country=str(input("enter your country name:"))
     code=country_code[country]
     print(code,end=" ")
     no=int(input())
-    st.write(code,no)
+    print(code,no)
 
 phone()
 
